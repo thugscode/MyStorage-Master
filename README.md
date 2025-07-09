@@ -20,6 +20,22 @@ MyStorage-Master/
 ├── secure_setup.py       # Secure token setup script
 └── README.md             # This file
 ```
+## Demo
+
+Below are example screenshots of the application in action:
+
+<p align="center">
+  <img src="FileUploader/input/HeatMap.png" alt="HeatMap Demo" width="400"/>
+  <br>
+  <em>Figure 1: Example HeatMap PNG</em>
+</p>
+
+<p align="center">
+  <img src="FileUploader/input/Genetic_Algorithms.png" alt="Genetic Algorithms Demo" width="400"/>
+  <br>
+  <em>Figure 2: Example Genetic Algorithms PNG</em>
+</p>
+
 ## Getting Started
 1. Clone the repository:
    ```bash
