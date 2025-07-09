@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Hash Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'">
+    <style>
+        /* Obfuscated class names using random-looking strings */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        ._x7b52f {
+            word-break: break-all;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            margin-top: 20px;
+            padding: 16px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: relative;
+        }
+        ._a4e92c {
+            margin-top: 12px;
+            padding: 10px 18px;
+            background-color: #4a6cf7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        ._a4e92c:hover {
+            background-color: #3a5ce5;
+        }
+        ._a4e92c:active {
+            transform: translateY(1px);
+        }
+        ._f72a1b {
+            position: relative;
+            margin-bottom: 24px;
+        }
+        ._e31b7c {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        ._c47d9e {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+        ._c47d9e:focus {
+            outline: none;
+            border-color: #4a6cf7;
+            box-shadow: 0 0 0 2px rgba(74, 108, 247, 0.2);
+        }
+        ._x7b52f h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        ._d83e5f {
+            padding: 10px;
+            background-color: #f0f0f0;
+            min-height: 20px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+        /* Anti-inspection measures */
+        @media print {
+            body {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+    <h1>Secure Password Hash Generator</h1>
+    <p>Use this tool to generate a SHA-256 hash for secure authentication.</p>
+    
+    <div class="_f72a1b">
+        <label for="password" class="_e31b7c">Password:</label>
+        <input type="password" id="password" class="_c47d9e" placeholder="Enter your password" autocomplete="new-password">
+        <button onclick="generateHash()" class="_a4e92c" id="_gen_btn">Generate Hash</button>
+    </div>
+    
+    <div class="_x7b52f">
+        <h3>Generated Hash:</h3>
+        <div id="hashResult" class="_d83e5f"></div>
+        <button id="copyBtn" onclick="copyHash()" class="_a4e92c" style="display: none;">Copy Hash</button>
+    </div>
+    
+    <div class="_x7b52f" style="margin-top: 30px; border-left: 4px solid #4a6cf7;">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Enter your password in the input field (never reuse passwords from other sites)</li>
+            <li>Click "Generate Hash" to create a SHA-256 hash</li>
+            <li>Copy the generated hash using the Copy button</li>
+            <li>Replace the PASSWORD_HASH value in your script.js file</li>
+            <li>Close this page and clear your browser history when finished</li>
+        </ol>
+        
+        <div style="background-color: #fff8e1; padding: 10px; border-left: 4px solid #ffc107; margin-top: 20px;">
+            <strong>Security Notes:</strong>
+            <ul>
+                <li>This tool generates hashes locally in your browser</li>
+                <li>Your password is never transmitted over the network</li>
+                <li>Use a strong password with uppercase, lowercase, numbers, and symbols</li>
+                <li>For maximum security, disconnect from the internet before using this tool</li>
+                <li>The SHA-256 hash cannot be reversed to obtain your original password</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Additional security measure: Clear the page when inactive -->
+    <noscript>
+        <div style="background-color: #f8d7da; color: #721c24; padding: 10px; margin-top: 20px; border-radius: 4px;">
+            JavaScript is required for this tool to function properly. Please enable JavaScript and reload the page.
+        </div>
+    </noscript>
+
+    <script>
+        // Security through obscurity - obfuscated variable and function names
+        (function() {
+            // Self-executing function to create a closure
+            // This prevents access to our variables from the global scope
+            
+            // Obfuscated function names and variables
+            const _0xa7b9e = async function(_0x2f8d1a) {
+                const _0x3e4f6c = new TextEncoder().encode(_0x2f8d1a);
+                const _0x5a21bf = await crypto.subtle.digest('SHA-256', _0x3e4f6c);
+                const _0x19d7c4 = Array.from(new Uint8Array(_0x5a21bf));
+                return _0x19d7c4.map(_0x28ba => _0x28ba.toString(16).padStart(2, '0')).join('');
+            };
+            
+            // Public functions attached to window with obfuscated names
+            window.generateHash = async function() {
+                const _0x4f8d23 = document.getElementById('password');
+                const _0x2a9b7c = _0x4f8d23.value;
+                
+                if (!_0x2a9b7c) {
+                    alert("Please enter a password");
+                    return;
+                }
+                
+                // Add visual feedback during processing
+                const _0x3b7e2c = document.querySelector('button');
+                const _0x5e8a47 = _0x3b7e2c.innerHTML;
+                _0x3b7e2c.innerHTML = 'Processing...';
+                _0x3b7e2c.disabled = true;
+                
+                // Add small delay for security (prevents timing attacks)
+                await new Promise(_0x39df2 => setTimeout(_0x39df2, 300 + Math.random() * 200));
+                
+                try {
+                    const _0x58e1ac = await _0xa7b9e(_0x2a9b7c);
+                    
+                    // Clear password from memory as soon as possible
+                    _0x4f8d23.value = '';
+                    
+                    // Update result and show copy button
+                    document.getElementById('hashResult').textContent = _0x58e1ac;
+                    document.getElementById('copyBtn').style.display = 'inline-block';
+                } catch(_0x2f7ec1) {
+                    alert('Error generating hash. Please try again.');
+                    console.error('Hash generation error:', _0x2f7ec1);
+                } finally {
+                    // Reset button state
+                    _0x3b7e2c.innerHTML = _0x5e8a47;
+                    _0x3b7e2c.disabled = false;
+                }
+            };
+            
+            window.copyHash = function() {
+                const _0x1d4a7e = document.getElementById('hashResult').textContent;
+                if (_0x1d4a7e) {
+                    navigator.clipboard.writeText(_0x1d4a7e)
+                        .then(() => {
+                            const _0x3f9c7d = document.getElementById('copyBtn');
+                            _0x3f9c7d.textContent = "Copied!";
+                            setTimeout(() => {
+                                _0x3f9c7d.textContent = "Copy Hash";
+                            }, 2000);
+                        })
+                        .catch(_0x5ec78f => {
+                            alert('Failed to copy. Please select and copy manually.');
+                        });
+                }
+            };
+            
+            // Add anti-debugging measures
+            const _0x4d7b8e = new Date();
+            const _0x37fc1a = () => {
+                const _0x59e64c = new Date() - _0x4d7b8e;
+                if (_0x59e64c > 100) {
+                    console.clear();
+                    console.warn("Debugging detected");
+                }
+                _0x4d7b8e.setTime(new Date().getTime());
+            };
+            
+            // Check for debugging at intervals
+            setInterval(_0x37fc1a, 1000);
+        })();
+    </script>
+    
+    <!-- Additional security and obfuscation features -->
+    <script>
+        // Clear hash on page visibility change (when user switches tabs or windows)
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'hidden') {
+                // Clear password input and hash result when tab is not visible
+                document.getElementById('password').value = '';
+                document.getElementById('hashResult').textContent = '';
+                document.getElementById('copyBtn').style.display = 'none';
+            }
+        });
+        
+        // Automatically clear session after 5 minutes of inactivity
+        (function() {
+            let inactivityTimer;
+            const resetInactivityTimer = function() {
+                clearTimeout(inactivityTimer);
+                inactivityTimer = setTimeout(function() {
+                    document.getElementById('password').value = '';
+                    document.getElementById('hashResult').textContent = '';
+                    document.getElementById('copyBtn').style.display = 'none';
+                    alert('Session cleared due to inactivity.');
+                }, 5 * 60 * 1000); // 5 minutes
+            };
+            
+            // Reset timer on user activity
+            ['mousedown', 'keypress', 'touchstart', 'scroll'].forEach(function(event) {
+                document.addEventListener(event, resetInactivityTimer, { passive: true });
+            });
+            
+            // Initialize timer
+            resetInactivityTimer();
+        })();
+        
+        // Prevent form submission
+        document.addEventListener('submit', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Detect developer tools
+        (function() {
+            const devtools = {
+                isOpen: false,
+                orientation: undefined
+            };
+            
+            // Function to check if dev tools are open
+            const checkDevTools = function() {
+                const widthThreshold = window.outerWidth - window.innerWidth > 160;
+                const heightThreshold = window.outerHeight - window.innerHeight > 160;
+                
+                if (widthThreshold || heightThreshold) {
+                    devtools.isOpen = true;
+                    devtools.orientation = widthThreshold ? 'vertical' : 'horizontal';
+                    document.body.innerHTML = '<h1>Security Alert</h1><p>Developer tools detected. This page has been locked for security reasons.</p>';
+                }
+            };
+            
+            // Check periodically
+            setInterval(checkDevTools, 1000);
+            
+            // Also check on resize
+            window.addEventListener('resize', checkDevTools);
+        })();
+        
+        // Override and disable console methods
+        (function() {
+            const originalConsole = window.console;
+            
+            // Override console methods
+            window.console = {
+                log: function() {},
+                info: function() {},
+                warn: function() {
+                    originalConsole.warn('Console activity detected and blocked for security.');
+                },
+                error: function(e) {
+                    if (e && e.toString().includes('Script error')) {
+                        originalConsole.error(e);
+                    }
+                },
+                debug: function() {},
+                clear: function() {
+                    originalConsole.clear();
+                }
+            };
+        })();
+    </script>
+</body>
+</html>

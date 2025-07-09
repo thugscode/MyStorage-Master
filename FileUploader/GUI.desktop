@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MyStorage
+Comment=Fast, secure password-protected ZIP creation with parallel processing
+Exec=python3 /home/shailesh/Cryptography/MyStorage-Master/FileUploader/high_performance_gui_zipper.py
+Icon=/home/shailesh/Cryptography/MyStorage-Master/FileUploader/icon.png
+Terminal=false
+StartupNotify=true
+Categories=Utility;FileManager;Archiving;Compression;
+Keywords=zip;archive;compress;encrypt;password;parallel;performance;
+Path=/home/shailesh/Cryptography/MyStorage-Master/FileUploader
+MimeType=application/zip;application/x-zip-compressed;

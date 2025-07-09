@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>MyStorage - Secure File Access</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background pattern -->
+    <div class="background-pattern"></div>
+    
+    <!-- Login Container -->
+    <div id="login-container" class="login-container">
+        <div class="login-form">
+            <div class="logo">
+                <img src="logo.png" alt="MyStorage Logo" class="logo-image">
+                <h1>MyStorage</h1>
+            </div>
+            <p class="subtitle">Secure File Access Portal</p>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Enter access password"
+                        required
+                        autocomplete="current-password"
+                    >
+                </div>
+                <button type="submit" class="login-btn">
+                    <span>Access Files</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- File Storage Container -->
+    <div id="file-container" class="file-container hidden">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-small">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>MyStorage</span>
+                </div>
+                <div class="header-buttons">
+                    <button id="refresh-btn" class="refresh-btn">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                    <button id="logout-btn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>Welcome to Your Secure Storage</h2>
+                <p>Access your protected files</p>
+            </div>
+
+            <div class="files-grid" id="files-grid">
+                <!-- Files will be populated by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <script src="security-utils.js"></script>
+    <script src="script.js"></script>
+    <script src="mobile.js"></script>
+</body>
+</html>
